@@ -279,6 +279,13 @@ export HADOOP_HOME=/usr/local/hadoop
 export PATH=$PATH:$HADOOP_HOME/bin
 export PATH=$PATH:$HADOOP_HOME/sbin
 ```
+![image](https://user-images.githubusercontent.com/43897597/55028397-f5b29900-4fdd-11e9-957d-99f25ee3cc0c.png)
+ 
+If you have not configured your hadoop-env.sh file, edit the file as mentioned in above section (Single Node Standalone Mode)
+
+![image](https://user-images.githubusercontent.com/43897597/55028598-82f5ed80-4fde-11e9-97ab-63c5dadcf29a.png)
+
+**Setting Passwordless connection between master and Slave**
 
 
 # References
