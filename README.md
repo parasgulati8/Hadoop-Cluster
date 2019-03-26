@@ -326,3 +326,5 @@ http://pingax.com/install-apache-hadoop-ubuntu-cluster-setup/
 http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
 
 https://www.linuxhelp.com/how-to-install-hadoop-in-ubuntu
+
+https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/
