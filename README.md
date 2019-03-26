@@ -25,7 +25,7 @@ export JAVA_HOME=$(readlink -f /usr/bin/java | sed " s:bin/java::" )
 run the hadoop:
 /usr/local/hadoop/bin/hadoop
 Copy the Hadoop' s configuration files into the newly created directory to use those files as our data.
-mkdir wordcount_classes
+$ mkdir wordcount_classes
 javac -classpath ${usr/local/hadoop/bin/hadoop classpath} -d wordcount_classes/ '/home/paras/Downloads/WordCount.java'
 you can find out the classpath by issuing:
 echo $(usr/local/hadoop/bin/hadoop classpath)
@@ -89,3 +89,5 @@ $ /usr/local/hadoop/bin/hdfs dfs -put '/home/paras/Downloads/WordCountText.txt' 
 
 ![image](https://user-images.githubusercontent.com/43897597/54974072-0f65c900-4f69-11e9-9afb-07dd31834491.png)
 
+Run Hadoop to execute the jar file:
+$ /usr/local/hadoop/bin/hadoop jar wc.jar WordCount /user/paras /output
