@@ -81,7 +81,9 @@ Start the namenodes. secondary namenodes and datanodes
 ![image](https://user-images.githubusercontent.com/43897597/54974014-d594c280-4f68-11e9-8c83-fdadf51783a8.png)
 
 Create the Directory in HDFS and insert the input file in it
-
+$ /usr/local/hadoop/bin/hdfs dfs -mkdir /user 
+$ /usr/local/hadoop/bin/hdfs dfs -mkdir /user/paras
+$ /usr/local/hadoop/bin/hdfs dfs -put '/home/paras/Downloads/WordCountText.txt' /user/paras
 ![image](https://user-images.githubusercontent.com/43897597/54974975-1f32dc80-4f6c-11e9-91e1-21f7d9765a33.png)
 
 
