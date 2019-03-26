@@ -91,3 +91,8 @@ $ /usr/local/hadoop/bin/hdfs dfs -put '/home/paras/Downloads/WordCountText.txt' 
 
 Run Hadoop to execute the jar file:
 $ /usr/local/hadoop/bin/hadoop jar wc.jar WordCount /user/paras /output
+![image](https://user-images.githubusercontent.com/43897597/54975395-5229a000-4f6d-11e9-8c59-69b3daa4c7c9.png)
+
+You can see the contents of output directory:
+
+![image](https://user-images.githubusercontent.com/43897597/54975481-974dd200-4f6d-11e9-8747-e9f52bb43b7f.png)
