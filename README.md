@@ -43,8 +43,6 @@ Check if the Hadoop is correctly installed by running the below command:
 
 ![image](https://user-images.githubusercontent.com/43897597/54976334-6ae78500-4f70-11e9-9489-0cfea4feb82d.png)
 
-![image](https://user-images.githubusercontent.com/43897597/54976334-6ae78500-4f70-11e9-9489-0cfea4feb82d.png)
-
 --Copy the Hadoop' s configuration files into a new directory to use those files.
 
 `mkdir wordcount_classes`
