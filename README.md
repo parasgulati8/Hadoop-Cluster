@@ -161,7 +161,7 @@ Rename the slave hostname as HadoopSlave
 4)install hadoop on both:
 Make changes in configuration of below mentioned files:
 
-core-site.xml:
+**core-site.xml**:
 
 `sudo gedit /usr/local/hadoop/etc/hadoop/core-site.xml `
 ```<property>
@@ -171,7 +171,9 @@ core-site.xml:
 ```
 ![image](https://user-images.githubusercontent.com/43897597/54981561-f1a35e80-4f7e-11e9-9fa3-3dce0e7044d5.png)
 
-hdfc-site.xml:
+**hdfc-site.xml**:
+
+**--HadoopMaster--**:
 
 `sudo gedit /usr/local/hadoop/etc/hadoop/hdfs-site.xml `
 ```
@@ -182,19 +184,28 @@ hdfc-site.xml:
 ```
 ![image](https://user-images.githubusercontent.com/43897597/54981926-edc40c00-4f7f-11e9-9eb6-49df1df17aa6.png)
 
-HadoopSlave:
+**--HadoopSlave--**:
 
 `sudo gedit /usr/local/hadoop/etc/hadoop/hdfs-site.xml `
 ```
+<configuration>
 <property>
-  <name>dfs.replication</name>
-  <value>1</value>
-</property>
+      <name>dfs.replication</name>
+      <value>1</value>
+ </property>
+
+ <property>
+      <name>dfs.datanode.data.dir</name>
+      <value>file:/usr/local/hadoop_tmp/hdfs/datanode</value>
+ </property>
+</configuration>
 ```
 
 ![image](https://user-images.githubusercontent.com/43897597/54982150-76db4300-4f80-11e9-8adb-5530a6bc4983.png)
 
-yarn-site.xml
+**yarn-site.xml**
+
+**--HadoopMaster and HadoopSlave--**:
 
 `sudo gedit /usr/local/hadoop/etc/hadoop/yarn-site.xml `
 ```
