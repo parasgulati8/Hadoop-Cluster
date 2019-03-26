@@ -96,3 +96,10 @@ $ /usr/local/hadoop/bin/hadoop jar wc.jar WordCount /user/paras /output
 You can see the contents of output directory:
 
 ![image](https://user-images.githubusercontent.com/43897597/54975481-974dd200-4f6d-11e9-8747-e9f52bb43b7f.png)
+
+Opening the file part-r-00000:
+ 
+![image](https://user-images.githubusercontent.com/43897597/54975584-e7c52f80-4f6d-11e9-8e84-04e6fa9fa075.png)
+
+# Run WordCount  on the Hadoop cluster with 2 VMs
+
