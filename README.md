@@ -114,9 +114,9 @@ Create public private key pairs
 
 Now `ssh localhost`
 
---Format the filesystem:
+**Format the filesystem**:
 
-`$ bin/hdfs namenode -format`
+`/usr/local/hadoop/bin/hdfs namenode -format`
 
 ![image](https://user-images.githubusercontent.com/43897597/54974248-c6624480-4f69-11e9-8ca3-e0e9dadb7840.png)
 
@@ -289,6 +289,36 @@ If you have not configured your hadoop-env.sh file, edit the file as mentioned i
 Refer to the below link to set up a passwordless ssh to localhost and the remote machine. This has to be done on master node as well as slave node.
 
 https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/
+
+**Format the filesystem**:
+
+`/usr/local/hadoop/bin/hdfs namenode -format`
+
+![image](https://user-images.githubusercontent.com/43897597/54974248-c6624480-4f69-11e9-8ca3-e0e9dadb7840.png)
+
+Start the namenodes, secondary namenodes and datanodes
+
+`/usr/local/hadoop/sbin/start-dfs.sh `
+
+![image](https://user-images.githubusercontent.com/43897597/54974014-d594c280-4f68-11e9-8c83-fdadf51783a8.png)
+
+Create the Directory in HDFS and insert the input file in it
+
+```
+$ /usr/local/hadoop/bin/hdfs dfs -mkdir /user 
+$ /usr/local/hadoop/bin/hdfs dfs -mkdir /user/paras
+$ /usr/local/hadoop/bin/hdfs dfs -put '/home/paras/Downloads/WordCountText.txt' /user/paras
+```
+
+![image](https://user-images.githubusercontent.com/43897597/54974975-1f32dc80-4f6c-11e9-91e1-21f7d9765a33.png)
+
+![image](https://user-images.githubusercontent.com/43897597/54974072-0f65c900-4f69-11e9-9afb-07dd31834491.png)
+
+Run Hadoop to execute the jar file:
+
+`$ /usr/local/hadoop/bin/hadoop jar wc.jar WordCount /user/paras /output`
+
+![image](https://user-images.githubusercontent.com/43897597/54975395-5229a000-4f6d-11e9-8c59-69b3daa4c7c9.png)
 
 # References
 http://pingax.com/install-apache-hadoop-ubuntu-cluster-setup/
