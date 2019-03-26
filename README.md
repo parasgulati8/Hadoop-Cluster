@@ -1,7 +1,7 @@
 # Hadoop-Cluster
 MapReduce in Cluster.
 
-#Prerequisites
+# Prerequisites
 Update your system
 apt-get update
 Install Java:
@@ -28,4 +28,6 @@ jar -cvf wc.jar -C wordcount_classes/ .
 /usr/local/hadoop/bin/hadoop jar wc.jar WordCount /usr/input /output
 
 
+# Hadoop in Pseudo-Distributed Mode
+sudo gedit /usr/local/hadoop/etc/hadoop/core-site.xml
 
