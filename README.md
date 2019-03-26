@@ -30,26 +30,22 @@ move the extracted files into /usr/local
 
 open the hadoop-env.sh file and add the static value and dynamic value
 
-`$nano /usr/local/hadoop/etc/hadoop/hadoop-env.sh`
+`nano /usr/local/hadoop/etc/hadoop/hadoop-env.sh`
 
 ```
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed " s:bin/java::" )
 ```
 
-run the hadoop:
+Check if the Hadoop is correctly installed by running the below command:
 
 `/usr/local/hadoop/bin/hadoop`
 
 ![image](https://user-images.githubusercontent.com/43897597/54976334-6ae78500-4f70-11e9-9489-0cfea4feb82d.png)
 
-.
-
-.
-
 ![image](https://user-images.githubusercontent.com/43897597/54976334-6ae78500-4f70-11e9-9489-0cfea4feb82d.png)
 
-Copy the Hadoop' s configuration files into the newly created directory to use those files as our data.
+--Copy the Hadoop' s configuration files into a new directory to use those files.
 
 `mkdir wordcount_classes`
 
