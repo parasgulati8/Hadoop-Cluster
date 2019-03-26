@@ -124,6 +124,8 @@ Now `ssh localhost`
 
 Start the namenodes. secondary namenodes and datanodes
 
+`/usr/local/hadoop/sbin/start-dfs.sh `
+
 ![image](https://user-images.githubusercontent.com/43897597/54974014-d594c280-4f68-11e9-8c83-fdadf51783a8.png)
 
 Create the Directory in HDFS and insert the input file in it
