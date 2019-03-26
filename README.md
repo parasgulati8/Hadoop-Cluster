@@ -261,19 +261,16 @@ HadoopSlave
 **hosts**
 `sudo gedit /etc/hosts`
 
-**_HadoopMaster_**
+**_HadoopMaster and HadoopSlave_**
 ```
 127.0.0.1	localhost
 <master node's IPv4 Address> HadoopMaster
 <slave node's IPv4 Address> HadoopSlave
 ```
-
-**_HadoopSlave_**
-```
-
-```
 **_Note:_** If the Hadoop version is 2.X or older, then you might need to change **_slaves_** instead of **_workers_**
 # References
 http://pingax.com/install-apache-hadoop-ubuntu-cluster-setup/
+
 http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
+
 https://www.linuxhelp.com/how-to-install-hadoop-in-ubuntu
