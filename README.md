@@ -173,18 +173,24 @@ Make changes in configuration of below mentioned files:
 
 **hdfc-site.xml**:
 
-**--HadoopMaster--**:
+**_HadoopMaster_**:
 
 `sudo gedit /usr/local/hadoop/etc/hadoop/hdfs-site.xml `
 ```
+<configuration>
 <property>
-  <name>dfs.replication</name>
-  <value>1</value>
+	<name>dfs.replication</name>
+	<value>1</value>
 </property>
+<property>
+<name>dfs.namenode.name.dir</name>
+<value>file:/usr/local/hadoop_tmp/hdfs/namenode</value>
+</property>
+</configuration>
 ```
 ![image](https://user-images.githubusercontent.com/43897597/54981926-edc40c00-4f7f-11e9-9eb6-49df1df17aa6.png)
 
-**--HadoopSlave--**:
+**_HadoopSlave_**:
 
 `sudo gedit /usr/local/hadoop/etc/hadoop/hdfs-site.xml `
 ```
@@ -224,6 +230,49 @@ Make changes in configuration of below mentioned files:
 ```
 ![image](https://user-images.githubusercontent.com/43897597/54982042-34b20180-4f80-11e9-9c53-e49e9d5b297d.png)
 
+**mapred-site.xml**
+`sudo gedit /usr/local/hadoop/etc/hadoop/mapred-site.xml`
+```
+<configuration>
+<property>
+	<name>mapreduce.job.tracker</name>
+	<value>HadoopMaster:5431</value>
+</property>
+<property>
+	<name>mapred.framework.name</name>
+	<value>yarn</value>
+</property>
+</configuration>
+```
+
+**masters**
+*_Only on master node i.e. HadoopMaster_**
+`sudo gedit /usr/local/hadoop/etc/hadoop/masters`
+```
+HadoopMaster
+```
+**workers**
+*_Only on master node i.e. HadoopMaster_**
+`sudo gedit /usr/local/hadoop/etc/hadoop/workers`
+```
+HadoopSlave
+```
+
+**hosts**
+`sudo gedit /etc/hosts`
+
+**_HadoopMaster_**
+```
+127.0.0.1	localhost
+<master node's IPv4 Address> HadoopMaster
+<slave node's IPv4 Address> HadoopSlave
+```
+
+**_HadoopSlave_**
+```
+
+```
+**_Note:_** If the Hadoop version is 2.X or older, then you might need to change **_slaves_** instead of **_workers_**
 # References
 http://pingax.com/install-apache-hadoop-ubuntu-cluster-setup/
 http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
