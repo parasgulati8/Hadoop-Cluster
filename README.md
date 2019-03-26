@@ -153,3 +153,24 @@ Opening the file part-r-00000:
 ![image](https://user-images.githubusercontent.com/43897597/54975584-e7c52f80-4f6d-11e9-8e84-04e6fa9fa075.png)
 
 # Run WordCount  on the Hadoop cluster with 2 VMs
+1) Configure two VMs 
+2) Rename the master hostname as HadoopMaster
+Rename the slave hostname as HadoopSlave
+
+3)install Java on both :
+4)install hadoop on both:
+Make changes in configuration of below mentioned files:
+
+core-site.xml:
+``
+```<property>
+  <name>fs.default.name</name>
+  <value>hdfs://HadoopMaster:9000</value>
+</property>
+```
+![image](https://user-images.githubusercontent.com/43897597/54981561-f1a35e80-4f7e-11e9-9fa3-3dce0e7044d5.png)
+
+# References
+http://pingax.com/install-apache-hadoop-ubuntu-cluster-setup/
+http://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
+https://www.linuxhelp.com/how-to-install-hadoop-in-ubuntu
