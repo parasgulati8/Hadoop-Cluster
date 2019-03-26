@@ -120,7 +120,7 @@ Now `ssh localhost`
 
 ![image](https://user-images.githubusercontent.com/43897597/54974248-c6624480-4f69-11e9-8ca3-e0e9dadb7840.png)
 
-Start the namenodes. secondary namenodes and datanodes
+Start the namenodes, secondary namenodes and datanodes
 
 `/usr/local/hadoop/sbin/start-dfs.sh `
 
@@ -142,11 +142,9 @@ Run Hadoop to execute the jar file:
 
 `$ /usr/local/hadoop/bin/hadoop jar wc.jar WordCount /user/paras /output`
 
-![image](https://user-images.githubusercontent.com/43897597/54976334-6ae78500-4f70-11e9-9489-0cfea4feb82d.png)
-
 ![image](https://user-images.githubusercontent.com/43897597/54975395-5229a000-4f6d-11e9-8c59-69b3daa4c7c9.png)
 
-You can see the contents of output directory:
+You can see the contents of output directory. Go to http://localhost:50070/ for Hadoop 2.x versions or older and http://localhost:9870/ for Hadoop 3.x versions:
 
 ![image](https://user-images.githubusercontent.com/43897597/54975481-974dd200-4f6d-11e9-8747-e9f52bb43b7f.png)
 
