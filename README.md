@@ -286,7 +286,9 @@ If you have not configured your hadoop-env.sh file, edit the file as mentioned i
 ![image](https://user-images.githubusercontent.com/43897597/55028598-82f5ed80-4fde-11e9-97ab-63c5dadcf29a.png)
 
 **Setting Passwordless connection between master and Slave**
+Refer to the below link to set up a passwordless ssh to localhost and the remote machine. This has to be done on master node as well as slave node.
 
+https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/
 
 # References
 http://pingax.com/install-apache-hadoop-ubuntu-cluster-setup/
