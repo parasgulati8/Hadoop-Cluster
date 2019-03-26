@@ -162,13 +162,17 @@ Rename the slave hostname as HadoopSlave
 Make changes in configuration of below mentioned files:
 
 core-site.xml:
-``
+
+`sudo gedit /usr/local/hadoop/etc/hadoop/core-site.xml `
 ```<property>
   <name>fs.default.name</name>
   <value>hdfs://HadoopMaster:9000</value>
 </property>
 ```
 ![image](https://user-images.githubusercontent.com/43897597/54981561-f1a35e80-4f7e-11e9-9fa3-3dce0e7044d5.png)
+
+hdfc-site.xml:
+`sudo gedit /usr/local/hadoop/etc/hadoop/hdfs-site.xml `
 
 # References
 http://pingax.com/install-apache-hadoop-ubuntu-cluster-setup/
