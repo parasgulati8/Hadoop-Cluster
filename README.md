@@ -2,11 +2,11 @@
 MapReduce in Cluster.
 
 # Prerequisites
-Update your system
+You might need to update your system
 
 `apt-get update`
 
-Install Java:
+Hadoop wokrs on java. If you don't have java already installed, install java by using :
 
 `apt-get install default-jdk -y`
 
@@ -16,19 +16,21 @@ See Java Version:
 
 ![image](https://user-images.githubusercontent.com/43897597/54974618-ffe77f80-4f6a-11e9-993d-c201529450c6.png)
 
-download the hadoop package:
+There are many versions of Hadoop available online. Select one of the stable release and download using the `wget` command.  
+
+http://www.apache.org/dyn/closer.cgi/hadoop/common/
 
 `wget http://apache.mirrors.lucidnetworks.net/hadoop/common/stable/hadoop-3.2.0.tar.gz`
 
-Extract the hadoop package:
+Once the download is complete, extract the package:
 
 `tar -xvzf hadoop-3.2.0.tar.gz`
 
-move the extracted files into /usr/local
+Move the extracted files into local directory /usr/local
 
 `mv hadoop-3.2.0 /usr/local/hadoop`
 
-open the hadoop-env.sh file and add the static value and dynamic value
+Open the hadoop-env.sh file using `nano` command and look for the `export JAVA_HOME=` line. Uncomment it  and add the static value and dynamic value for `JAVA_HOME`
 
 `nano /usr/local/hadoop/etc/hadoop/hadoop-env.sh`
 
@@ -43,26 +45,28 @@ Check if the Hadoop is correctly installed by running the below command:
 
 ![image](https://user-images.githubusercontent.com/43897597/54976334-6ae78500-4f70-11e9-9489-0cfea4feb82d.png)
 
---Copy the Hadoop' s configuration files into a new directory to use those files.
+Ceate a directory for your input classes.
 
 `mkdir wordcount_classes`
+
+Execute the java file with the following command (If java file is not in present working directory, use full directory address where java file is located):
 
 `javac -classpath ${usr/local/hadoop/bin/hadoop classpath} -d wordcount_classes/ '/home/paras/Downloads/WordCount.java'`
 
 you can find out the classpath by issuing:
-
 `$ echo $(usr/local/hadoop/bin/hadoop classpath)`
 
 ![image](https://user-images.githubusercontent.com/43897597/54974334-18a36580-4f6a-11e9-9f4a-9b90f952a937.png)
+
+Consolidate the files in the wordcount_classes/ directory into a single jar file:
 
 `jar -cvf wc.jar -C wordcount_classes/ . `
 
 ![image](https://user-images.githubusercontent.com/43897597/54974497-a2ebc980-4f6a-11e9-8b97-0558a59de7c7.png)
 
+Run the jar file in hadoop:
+
 `/usr/local/hadoop/bin/hadoop jar wc.jar WordCount /usr/input /output`
-
-
-
 
 
 # Hadoop in Pseudo-Distributed Mode
