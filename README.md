@@ -267,7 +267,20 @@ HadoopSlave
 <master node's IPv4 Address> HadoopMaster
 <slave node's IPv4 Address> HadoopSlave
 ```
+
 **_Note:_** If the Hadoop version is 2.X or older, then you might need to change **_slaves_** instead of **_workers_**
+
+**~/.bashrc file**
+Open the file using `sudo gedit ~/.bashrc` and add the below lines at the end of the file:
+
+```
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/
+export HADOOP_HOME=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+```
+
+
 # References
 http://pingax.com/install-apache-hadoop-ubuntu-cluster-setup/
 
