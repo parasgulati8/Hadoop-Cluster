@@ -172,7 +172,46 @@ core-site.xml:
 ![image](https://user-images.githubusercontent.com/43897597/54981561-f1a35e80-4f7e-11e9-9fa3-3dce0e7044d5.png)
 
 hdfc-site.xml:
+
 `sudo gedit /usr/local/hadoop/etc/hadoop/hdfs-site.xml `
+```
+<property>
+  <name>dfs.replication</name>
+  <value>1</value>
+</property>
+```
+![image](https://user-images.githubusercontent.com/43897597/54981926-edc40c00-4f7f-11e9-9eb6-49df1df17aa6.png)
+
+HadoopSlave:
+
+`sudo gedit /usr/local/hadoop/etc/hadoop/hdfs-site.xml `
+```
+<property>
+  <name>dfs.replication</name>
+  <value>1</value>
+</property>
+```
+
+![image](https://user-images.githubusercontent.com/43897597/54982150-76db4300-4f80-11e9-8adb-5530a6bc4983.png)
+
+yarn-site.xml
+
+`sudo gedit /usr/local/hadoop/etc/hadoop/yarn-site.xml `
+```
+<property>
+	<name>yarn.resourcemanager.resource-tracker.address</name>
+	<value>HadoopMaster:8025</value>
+</property>
+<property>
+	<name>yarn.resourcemanager.scheduler.address</name>
+	<value>HadoopMaster:8035</value>
+</property>
+<property>
+	<name>yarn.resourcemanager.address</name>
+	<value>HadoopMaster:8050</value>
+</property>
+```
+![image](https://user-images.githubusercontent.com/43897597/54982042-34b20180-4f80-11e9-9c53-e49e9d5b297d.png)
 
 # References
 http://pingax.com/install-apache-hadoop-ubuntu-cluster-setup/
