@@ -2,6 +2,9 @@
 MapReduce in Cluster.
 
 # Prerequisites
+You need at least two Linux based hosts to set up a hadoop cluster. I used two Ubuntu 16.04 VMs hosted on VirtualBox.
+
+# Steps-by-Step Process
 You might need to update your system
 
 `apt-get update`
